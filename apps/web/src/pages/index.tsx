@@ -1,8 +1,8 @@
+import { withUser } from "@server/auth/withUser";
+import { propsBuilder } from "@server/builder/propsBuilder";
+import { withTranslations } from "@server/builder/withTranslations";
 import { useTranslation } from "next-i18next";
 import { Button } from "ui";
-import { withUser } from "../server/auth/withUser";
-import { withTranslations } from "../server/withTranslations";
-import { propsBuilder } from "../utils/propsBuilder";
 import styles from "./index.module.css";
 
 export default function Web() {
