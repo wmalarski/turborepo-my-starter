@@ -1,7 +1,7 @@
-import { GetServerSideProps } from "next";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Button } from "ui";
+import { withTranslations } from "../server/withTranslations";
+import { propsBuilder } from "../utils/propsBuilder";
 import styles from "./index.module.css";
 
 export default function Web() {
@@ -15,15 +15,8 @@ export default function Web() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  locale,
-  defaultLocale,
-}) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || defaultLocale || "pl", [
-        "common",
-      ])),
-    },
-  };
-};
+export const getServerSideProps = propsBuilder()
+  .use(withTranslations({ namespaces: ["common"] }))
+  .get(({ translations }) => {
+    return Promise.resolve({ props: { ...translations } });
+  });
