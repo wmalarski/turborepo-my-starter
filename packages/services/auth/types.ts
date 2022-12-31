@@ -5,4 +5,5 @@ export type Session = {
 export type User = {
   id: string;
   email: string;
+  session: Session;
 };
