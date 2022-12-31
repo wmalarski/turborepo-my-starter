@@ -1,5 +1,5 @@
 import type { NextApiRequest } from "next";
-import type { User } from "./types";
+import type { User } from "services";
 
 export const getUser = (
   cookies: NextApiRequest["cookies"]

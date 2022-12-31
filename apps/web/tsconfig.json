@@ -3,7 +3,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "../../packages/services/auth/types.ts"
   ],
   "exclude": [
     "node_modules"

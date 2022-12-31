@@ -11,7 +11,7 @@ export default function Web() {
   return (
     <div>
       <h1 className={styles.page}>{t("title")}</h1>
-      <Button />
+      <Button>{t("title")}</Button>
     </div>
   );
 }
