@@ -1,3 +1,4 @@
 packages/eslint-config-custom/index.js
 .eslintrc.js
 next.config.js
+apps/web/next-i18next.config.js

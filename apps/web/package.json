@@ -12,7 +12,10 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "next-i18next": "^13.0.2",
+    "react-i18next": "^12.1.1",
+    "i18next": "^22.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
