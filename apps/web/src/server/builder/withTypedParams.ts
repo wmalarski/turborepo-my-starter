@@ -8,9 +8,7 @@ export const withTypedParams = <
   schema: z.ZodObject<SchemaType>
 ) => {
   return async (event: R) => {
-    console.log("before", event.params, event.query);
     const parsedParams = await schema.parseAsync(event.params);
-    console.log("after", parsedParams);
     return { ...event, parsedParams };
   };
 };
